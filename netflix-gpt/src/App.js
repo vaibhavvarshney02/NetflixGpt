@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="App">
-   <h1 className='bg-green-400'>kkfffffffffffkkk</h1>
+    <div>
+   <Body/>
+   
     </div>
   );
 }
