@@ -28,7 +28,7 @@ const navigate = useNavigate();
     });
   }
   useEffect(()=>{
-    onAuthStateChanged(auth, (user) => {
+   const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
@@ -48,6 +48,8 @@ const navigate = useNavigate();
      
       }
     });
+    // unsubscribe when components unmount
+    return () => unsubscribe();
    },[])
   return (
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
