@@ -4,7 +4,7 @@ import { checkValidData} from "../utils/validate"
 import { createUserWithEmailAndPassword } from 'firebase/auth' 
 import {auth} from "../utils/firebase";
 import { signInWithEmailAndPassword , updateProfile} from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
@@ -14,7 +14,7 @@ const Hellologin = () => {
   const [errormess,setErrormess] =useState(null);
     const [isSignInForm ,setIsSignInForm] = useState(true);
     const dispatch = useDispatch();
-    const navigate =useNavigate(); 
+   
     const name = useRef(null);
     const email = useRef(null);
     const password = useRef(null);
@@ -51,7 +51,7 @@ if(!isSignInForm){
         photoURL:photoURL
        })
       );
-      navigate("/browse")
+     
 
 
       // ...
@@ -61,7 +61,7 @@ if(!isSignInForm){
       // ...
     });
     // console.log(user);
-    navigate("/browse");
+  
     // ...
   })
   .catch((error) => {
@@ -79,7 +79,7 @@ signInWithEmailAndPassword(auth, email.current.value, password.current.value)
     // Signed in 
     const user = userCredential.user; 
     console.log(user);
-    navigate("/browse");
+   
     // ...
   })
   .catch((error) => {
