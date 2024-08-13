@@ -6,8 +6,9 @@ import Maincontainer from './Maincontainer';
 import Secondarycontainer from './Secondarycontainer';
 import usePopularMovies from '../hooks/usePopularMovies';
 import useUpcomingMovies from '../hooks/useUpcomingMovies';
-import useToprated from '../hooks/useToprated';
 import GPTSearch from './GPTSearch';
+import useToprated from '../hooks/useToprated';
+// import GPTSearch from './GPTSearch';
 import { useSelector } from 'react-redux';
 
 
@@ -21,7 +22,7 @@ useUpcomingMovies();
 useToprated();
 
   return (
-    <div>   
+    <div className='bg-black md:bg-inherit'>   
       <Header/>
       
         {showGptSearch ?(

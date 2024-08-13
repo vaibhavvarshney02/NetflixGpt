@@ -17,3 +17,6 @@ export const API_OPTIONS =  {
     {identifire:"hindi",name:"Hindi"},
     {identifire:"spanish",name:"Spanish"},
   ];
+
+  // export const OPENAI_KEY = "";
+  export const OPENAI_KEY ="https://api.themoviedb.org/3/search/movie?query=salaar&include_adult=false&language=en-US&page=1";
